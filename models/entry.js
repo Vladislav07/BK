@@ -1,8 +1,11 @@
 const redis = require("ioredis");
+
+const home=require('../home');
+
 const db = new redis({
-  host: "redis-17625.c1.eu-west-1-3.ec2.cloud.redislabs.com",
-  port: "17625",
-  password: "6En1mDA2ie8AaDGHxAw0iIDKfNTeOXE7",
+ host:home.HOST, 
+ port:home.PORT,
+ password:home.PASSWORD,
 });
 db.on("connect", () => console.log("yyyyyyyyyyyy"));
 db.on("error", (err) => console.error("redis", err));

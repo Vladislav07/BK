@@ -1,5 +1,4 @@
-//const express = require('express');
-//const router = express.Router();
+const express = require('express');const router = express.Router();
 const Entry = require('../models/entry');
 
 exports.list = (req, res, next) => {
